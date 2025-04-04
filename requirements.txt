@@ -1,0 +1,34 @@
+# Bibliotecas essenciais para análise e visualização de dados
+pandas>=2.0.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Para manipulação de datas e horários, se necessário
+datetime
+
+# Para abrir o notebook
+jupyterlab>=4.0.0
+
+# Opcional, mas útil para visualizações interativas
+plotly>=5.15.0
+
+# Garantir compatibilidade com ambientes baseados em ciência de dados
+scikit-learn>=1.3.0
+
+💡 Dicas:
+Se vocês forem usar ambientes virtuais, recomendo rodar:
+
+python -m venv venv
+source venv/bin/activate  # ou .\venv\Scripts\activate no Windows
+pip install -r requirements.txt
+
+Para salvar as dependências exatas depois de instalar tudo, você pode rodar:
+
+bash
+Copiar
+Editar
+pip freeze > requirements.txt
+
+
+Mas cuidado: esse comando vai registrar todas as libs e versões exatas, o que pode gerar um arquivo bem mais longo e menos portável.
