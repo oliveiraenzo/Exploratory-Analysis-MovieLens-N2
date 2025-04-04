@@ -1,111 +1,122 @@
-# 📊 Atividade N2 - 1º Bimestre
+# 🎬 N2 Assignment – Exploratory Data Analysis with MovieLens
 
-Este repositório contém a solução da Atividade Avaliativa N2 do 1º Bimestre da disciplina de Análise de Dados. O objetivo é realizar uma análise exploratória do conjunto de dados [MovieLens (Small)](https://grouplens.org/datasets/movielens/) e responder a algumas perguntas sobre o comportamento dos usuários e as características dos filmes avaliados.
-
----
-
-## 📁 Estrutura do Projeto
-
-atividade-n2-movielens/ 
-├── data/ # Arquivos do dataset 
-├── notebook/ 
-│ └── atividade_n2_movielens.ipynb 
-├── requirements.txt 
-└── README.md
+This repository contains the solution to the **N2 assessment** for the **1st Term** in the Data Analysis course.  
+The objective is to perform an **exploratory data analysis** using the [MovieLens (Small)](https://grouplens.org/datasets/movielens/) dataset and answer key questions about user behavior and movie characteristics.
 
 ---
 
-## ✅ Critérios Avaliados e Respostas
+## 📌 About the Project
 
-### 📌 Questão 1 – Análise Exploratória
-
-#### **(a) Existe alguma correlação entre o ano de lançamento do filme e sua avaliação média?**  
-📈 **Resposta:**
-Analisando os dados, foi possível calcular a média das avaliações dos filmes agrupados por ano de lançamento. Observou-se uma **correlação fraca e negativa** entre o ano de lançamento e a média das avaliações (correlação de aproximadamente `-0.350`). Isso indica que **filmes mais antigos tendem a ter médias um pouco mais altas**, possivelmente por serem clássicos ou já filtrados pelo tempo (só os mais relevantes ainda recebem avaliações).
-
----
-
-#### **(b) Qual o grupo mais disperso, o de usuários que avaliaram ou o de usuários que rotularam filmes?**  
-📊 **Resposta:**
-A análise revelou que os usuários que avaliaram os filmes apresentam uma **dispersão maior em comparação aos que rotularam**. Isso foi evidenciado pelo desvio padrão mais elevado no número de avaliações por usuário, indicando uma variação maior na quantidade de interações individuais. Além disso, a distribuição dos dados mostrou que há usuários que avaliaram um número significativamente maior de filmes em relação à média, enquanto no caso das tags, a variação foi menor e mais concentrada em um intervalo reduzido. O histograma e o boxplot reforçaram essa conclusão ao ilustrar uma amplitude maior nas avaliações do que nos rótulos atribuídos.  
+- 🗓️ **Academic Assignment** – 1st N2  
+- 🧠 **Topic**: Exploratory Data Analysis (EDA)  
+- 📚 **Dataset**: MovieLens (Small), with information on movies, ratings, tags, and links.  
+- 👥 **Group Work**: Each member contributed individual questions based on different data files.  
 
 ---
 
-#### **(c) Qual a categoria rotulada mais frequente?**  
-🏷️ **Resposta:**
-A análise revelou que a tag mais frequente no dataset é **'IN NETFLIX QUEUE'**, que apareceu 131 vezes. Isso indica que esta é a categoria mais utilizada pelos usuários para rotular filmes no sistema. O gráfico de barras mostra claramente a distribuição das tags mais populares, com 'IN NETFLIX QUEUE' destacando-se significativamente em relação às demais.
-
----
-
-#### **(d) Como estão distribuídas as avaliações ao longo do tempo?**  
-⏳ **Resposta:**
-A distribuição das avaliações ao longo do tempo pode mostrar um aumento gradual, um pico em anos específicos ou uma oscilação dependendo de vários fatores, como o número de lançamentos de filmes populares e a participação dos usuários nas avaliações.
-
----
-
-### 📌 Questão 2 – Perguntas Individuais (40 pontos)
-
-Cada membro do grupo escolheu uma das quatro tabelas do conjunto de dados (`movies.csv`, `ratings.csv`, `tags.csv`, `links.csv`) e elaborou **duas perguntas com suas respectivas respostas** no notebook principal.
-
----
-
-#### **Quantos gêneros diferentes de filmes existem na base de dados movies.csv ?**
-⏳ **Resposta:**
-Total de gêneros únicos: 20
-
----
-
-#### **Qual é o gênero mais frequente entre os filmes cadastrados?**
-⏳ **Resposta:**
-O gênero mais frequente é 'Drama', com 4361 filmes.
-
----
-
-#### **Qual é a distribuição temporal da criação de tags?**
-⏳ **Resposta:**
-A distribuição temporal da criação de tags revela como a interação dos usuários com o sistema evolui ao longo do tempo. A análise de picos ou quedas pode fornecer insights valiosos sobre o comportamento do usuário e ajudar a entender tendências de uso de tags em diferentes períodos.
-
----
-
-#### **Quais filmes receberam mais tags diferentes?**
-⏳ **Resposta:**
-Filme com ID 296: Recebeu 173 tags diferentes.
-Filme com ID 2959: Recebeu 48 tags diferentes.
-Filme com ID 924: Recebeu 40 tags diferentes.
-Filme com ID 293: Recebeu 32 tags diferentes.
-Filme com ID 1732: Recebeu 31 tags diferentes.
-
----
-
-#### **Qual a relação entre número de tags e número de usuários por filme?**
-⏳ **Resposta:**
-Existe uma correlação positiva entre o número de usuários que marcaram um filme e o número total de tags recebidas. Alguns filmes são outliers, recebendo muitas tags de poucos usuários (indicando usuários muito ativos).
-
----
-
-#### **Qual é a estrutura e as estatísticas básicas do dataset de links de filmes?**
-⏳ **Resposta:**
-O dataset possui 9742 exemplos/amostras/linhas e 3 atributos/variáveis/colunas.
-
----
-
-#### **O conjunto de dados contém registros duplicados de movieId?**
-⏳ **Resposta:**
-Não há registros duplicados na coluna movieId.
-
----
-
-### 📌 Questão 3 – Compartilhamento no Git (20 pontos)
-
-Este repositório contém toda a atividade resolvida em um único arquivo Jupyter Notebook, conforme solicitado.
-
-📎 Link para este repositório: **[https://github.com/seu-usuario/atividade-n2-movielens](https://github.com/seu-usuario/atividade-n2-movielens)**
-
----
-
-## 💻 Requisitos
-
-Veja `requirements.txt` para instalar as dependências necessárias:
+## 📁 Project Structure
 
 ```bash
+atividade-n2-movielens/
+├── data/                     # Dataset files (.csv)
+├── notebook/
+│   └── atividade_n2_movielens.ipynb  # Main analysis notebook
+├── requirements.txt          # Python dependencies
+└── README.md                 # Project documentation
+```
+
+---
+
+## ✅ Evaluation Criteria & Questions
+
+### 📊 Question 1 – Exploratory Analysis
+
+#### (a) Is there any correlation between movie release year and average rating?
+> A weak negative correlation of ≈ `-0.350` was found. Older movies tend to have slightly higher average ratings, possibly due to classic status or survival bias.
+
+#### (b) Which group shows more variation: users who rated or users who tagged?
+> Rating users showed greater variation (higher standard deviation and wider distribution). Tagging behavior was more consistent across users.
+
+#### (c) What is the most frequent tagged category?
+> The tag **"IN NETFLIX QUEUE"** appeared **131 times**, making it the most frequently used label.
+
+#### (d) How are ratings distributed over time?
+> The temporal analysis revealed periods of peaks and variation, reflecting trends in user engagement and popular movie releases.
+
+---
+
+### 🙋‍♂️ Question 2 – Individual Questions (Each student selected one dataset)
+
+#### **From `movies.csv`**
+- **How many unique genres are there?** → `20`  
+- **Most frequent genre?** → `Drama` with `4,361` movies  
+
+#### **From `tags.csv`**
+- **How are tag creation dates distributed?**  
+  Shows growth and peak periods in user interaction.
+- **Which movies received the most tags?**  
+  - Movie ID 296 → `173` tags  
+  - Movie ID 2959 → `48` tags  
+
+#### **From `ratings.csv`**
+- **Is there a correlation between number of ratings and average rating?**  
+  Moderate correlation, suggesting popular films often receive higher scores.
+- **How does user activity evolve over time?**  
+  Analysis reveals seasonal or year-based rating spikes.
+
+#### **From `links.csv`**
+- **Any duplicate `movieId` entries?** → `No`  
+- **Basic structure:**  
+  - `9742` rows  
+  - `3` columns: `movieId`, `imdbId`, `tmdbId`
+
+---
+
+### 🔗 Question 3 – GitHub Repository
+
+This repository contains all content in a single **Jupyter Notebook** as requested.
+
+📎 **Repository URL**: [https://github.com/your-username/atividade-n2-movielens](https://github.com/your-username/atividade-n2-movielens)
+
+---
+
+## ⚙️ How to Run
+
+Make sure you have Python installed (version 3.8+ recommended). Then:
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/atividade-n2-movielens.git
+cd atividade-n2-movielens
+
+# Install dependencies
 pip install -r requirements.txt
+
+# Open the notebook
+jupyter notebook notebook/atividade_n2_movielens.ipynb
+```
+
+---
+
+## 📦 Dependencies
+
+Main libraries used:
+
+- `pandas`
+- `numpy`
+- `matplotlib`
+- `seaborn`
+- `scikit-learn` (for correlation analysis)
+
+See `requirements.txt` for full details.
+
+---
+
+## 👥 Authors
+
+This project was developed by:
+
+- **Student 1** – Enzo Brito Aves de Oliveira
+- **Student 2** – Heitor Santos Ferreira
+- **Student 3** – Jackson Gomes Cerqueira
+- **Student 4** – Tainara do Nascimento Casimiro
